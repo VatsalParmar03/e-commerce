@@ -23,7 +23,7 @@ const CartItems = () => {
         .filter(([key, value]) => value >= 1)
         .map(([key, value]) => ({ key: key, value: value }));
 
-      const response = await axios.post("http://localhost:4000/make-order", {
+      const response = await axios.post("https://e-commerce-voen.onrender.com/make-order", {
         product_ids: product_ids,
         address: flatNo + area + city + state + pincode + " - " + contact,
         fullName: fullName

@@ -24,7 +24,7 @@ const Navbar = () => {
   }
 
   const fetchSearchedResults = async () => {
-    const response = await axios.get("http://localhost:4000/search/products?query=" + searchVal, {});
+    const response = await axios.get("https://e-commerce-voen.onrender.com/search/products?query=" + searchVal, {});
     console.log("response :: ", response.data)
     setSearchResults([...response.data])
   }

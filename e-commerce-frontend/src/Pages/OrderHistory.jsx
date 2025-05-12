@@ -7,7 +7,7 @@ const OrderHistory = () => {
   const [orders, setOrders] = useState([]);
 
   const fetchAPI = async () => {
-    const orders = await axios.get("http://localhost:4000/orders");
+    const orders = await axios.get("https://e-commerce-voen.onrender.com/orders");
     setOrders(orders.data.result);
   }
 
