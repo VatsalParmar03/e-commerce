@@ -6,7 +6,7 @@ const ListProduct = () => {
   const [allproducts, setAllProducts] = useState([]);
 
   const fetchInfo = () => { 
-    fetch('http://localhost:4000/allproducts') 
+    fetch('https://e-commerce-voen.onrender.com/allproducts') 
             .then((res) => res.json()
           ) 
             .then((data) => {
@@ -21,7 +21,7 @@ const ListProduct = () => {
     }, [])
 
     const removeProduct = async (id) => {
-      await fetch('http://localhost:4000/removeproduct', {
+      await fetch('https://e-commerce-voen.onrender.com/removeproduct', {
       method: 'POST',
       headers: {
         Accept:'application/json',
@@ -30,7 +30,7 @@ const ListProduct = () => {
       body: JSON.stringify({id:id}),
     })
 
-    fetch('http://localhost:4000/allproducts') 
+    fetch('https://e-commerce-voen.onrender.com/allproducts') 
     .then((res) => res.json()) 
     .then((data) => setAllProducts(data))
 
