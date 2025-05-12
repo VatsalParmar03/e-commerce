@@ -6,13 +6,13 @@ const jwt = require("jsonwebtoken");
 const multer = require("multer");
 const path = require("path");
 const cors = require("cors");
-
+require('dotenv').config(); 
 
 app.use(express.json());
 app.use(cors());
 
 // Database Connection With MongoDB
-mongoose.connect("mongodb+srv://vatsalparmar1998:vatsal2024@cluster0.vdeuf0q.mongodb.net/");
+mongoose.connect(process.env.MONGO_URI);
 // paste your mongoDB Connection string above with password
 // password should not contain '@' special character
 
